@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacqueline Núñez | Especialista en Seguros de Vida</title>
+  <meta name="description" content="Jacqueline Núñez — Especialista en Seguros de Vida y Consultora Financiera. Ayudando a familias latinas a proteger su futuro. FCA Financial." />
+  <link rel="canonical" href="https://jaqui-life-insurance.pages.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jacqueline Núñez | Especialista en Seguros de Vida" />
+  <meta property="og:description" content="Ayudando a familias latinas en EE.UU. a proteger sus ingresos, reducir impuestos y construir un legado duradero. FCA Financial." />
+  <meta property="og:url" content="https://jaqui-life-insurance.pages.dev/" />
+  <meta property="og:image" content="https://assets.cdn.filesafe.space/O57KCcI6OU1nHchdjZAr/media/69cdb862a7b48d7695f1182c.png" />
+  <meta property="og:locale" content="es_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%231E4535'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='serif' fill='%23BF8830'>JN</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ──────────────────────────────── */
+    :root {
+      --cream:        #FAF7F2;
+      --cream-mid:    #F0EBE0;
+      --cream-deep:   #E5DDD0;
+      --espresso:     #1A100A;
+      --forest:       #1E4535;
+      --forest-mid:   #2D6A4F;
+      --forest-light: #3A8A68;
+      --gold:         #BF8830;
+      --gold-mid:     #D4A245;
+      --gold-light:   #E8C070;
+      --text:         #2C1E14;
+      --text-muted:   #7A6A58;
+      --white:        #FFFFFF;
+      --shadow-sm:    0 2px 12px rgba(26,16,10,.08);
+      --shadow-md:    0 8px 32px rgba(26,16,10,.12);
+      --shadow-lg:    0 20px 60px rgba(26,16,10,.18);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-wrap: pretty;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    /* ── NAV ─────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background .4s ease, box-shadow .4s ease;
+    }
+
+    #nav.scrolled {
+      background: rgba(26, 16, 10, .96);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: .03em;
+      line-height: 1;
+    }
+
+    .nav-logo span {
+      display: block;
+      font-size: .7rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-top: .2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.75);
+      font-size: .8rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .nav-cta-btn {
+      background: var(--gold) !important;
+      color: #fff !important;
+      padding: .55rem 1.4rem;
+      border-radius: 2px;
+      font-weight: 500 !important;
+      transition: background .2s, color .2s !important;
+      letter-spacing: .06em !important;
+    }
+    .nav-cta-btn:hover {
+      background: var(--gold-light) !important;
+      color: var(--espresso) !important;
+    }
+
+    /* ── HERO ────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, #0A1E12 0%, #1E4535 55%, #2D6A4F 100%);
+    }
+
+    /* Subtle grid texture */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-photo-wrap {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 52%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 95%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, #0A1E12 0%, rgba(10,30,18,.6) 55%, transparent 80%),
+        linear-gradient(0deg, #0A1E12 0%, transparent 30%);
+    }
+
+    /* Gold accent bar */
+    .hero-accent-bar {
+      position: absolute;
+      right: 52%;
+      top: 15%;
+      bottom: 15%;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+      opacity: .5;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 0 3rem;
+      max-width: 680px;
+      padding-top: 6rem;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 5.5vw, 5rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 300;
+      color: rgba(255,255,255,.6);
+      font-style: italic;
+      margin-bottom: 2rem;
+      letter-spacing: .02em;
+    }
+
+    .hero-desc {
+      font-size: .975rem;
+      color: rgba(255,255,255,.72);
+      line-height: 1.8;
+      max-width: 440px;
+      margin-bottom: 2.75rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2rem;
+      background: var(--gold);
+      color: #fff;
+      font-size: .825rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background .25s, transform .2s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-mid);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2rem;
+      border: 1px solid rgba(255,255,255,.3);
+      color: rgba(255,255,255,.85);
+      font-size: .825rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,.65);
+      background: rgba(255,255,255,.06);
+    }
+
+    .hero-contact {
+      margin-top: 2.75rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .85rem;
+      color: rgba(255,255,255,.45);
+    }
+    .hero-contact a {
+      color: var(--gold-light);
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .hero-contact a:hover { color: #fff; }
+    .hero-contact::before {
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 1px;
+      background: rgba(255,255,255,.2);
+    }
+
+    /* ── TRUST STRIP ─────────────────────────── */
+    .trust-strip {
+      background: var(--forest);
+      padding: 1.1rem 3rem;
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      padding: .5rem 2.5rem;
+      color: rgba(255,255,255,.8);
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-right: 1px solid rgba(255,255,255,.12);
+    }
+    .trust-item:last-child { border-right: none; }
+
+    .trust-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── SERVICES ────────────────────────────── */
+    #services {
+      padding: 6rem 3rem;
+      background: var(--cream);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 4rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 1px;
+      background: var(--gold);
+      opacity: .6;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 3.5vw, 3rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--espresso);
+    }
+    .section-title em {
+      font-style: italic;
+      color: var(--forest-mid);
+    }
+
+    .section-sub {
+      margin-top: .875rem;
+      font-size: .95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.25rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .svc-card {
+      background: #fff;
+      border: 1px solid var(--cream-deep);
+      border-radius: 3px;
+      padding: 2.25rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+      cursor: default;
+    }
+    .svc-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--forest-mid));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s ease;
+    }
+    .svc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .svc-card:hover::after { transform: scaleX(1); }
+
+    .svc-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--cream-mid);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+      font-size: 1.5rem;
+      transition: background .3s;
+    }
+    .svc-card:hover .svc-icon { background: var(--cream-deep); }
+
+    .svc-title-es {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--espresso);
+      line-height: 1.2;
+      margin-bottom: .2rem;
+    }
+    .svc-title-en {
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .svc-desc {
+      font-size: .875rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── ABOUT ───────────────────────────────── */
+    #about {
+      background: var(--espresso);
+      padding: 7rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle texture */
+    #about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 80% 20%, rgba(45,106,79,.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .about-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 6rem;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 3px;
+      display: block;
+    }
+
+    .about-frame {
+      position: absolute;
+      top: -1.25rem;
+      left: -1.25rem;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: 2rem;
+      right: -1.5rem;
+      background: var(--gold);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 2px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .about-badge strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .about-badge span {
+      display: block;
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      opacity: .9;
+      margin-top: .25rem;
+    }
+
+    .about-content .eyebrow { color: var(--gold-light); }
+    .about-content .eyebrow::before,
+    .about-content .eyebrow::after { background: var(--gold-light); }
+
+    .about-content .section-title { color: #fff; }
+    .about-content .section-title em { color: var(--gold-light); }
+
+    .bio-block {
+      margin-top: 2rem;
+    }
+
+    .bio-lang-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .bio-lang-tag::before {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .bio-es p {
+      font-size: 1rem;
+      color: rgba(255,255,255,.82);
+      line-height: 1.9;
+    }
+    .bio-es p + p { margin-top: 1.15rem; }
+
+    .bio-divider {
+      margin: 2.5rem 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,.1), transparent);
+    }
+
+    .bio-en {
+      font-size: .88rem;
+      color: rgba(255,255,255,.38);
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .about-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── QUOTE ───────────────────────────────── */
+    #quote {
+      background: var(--cream-mid);
+      padding: 5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #quote::before {
+      content: '\201C';
+      position: absolute;
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18rem;
+      color: var(--cream-deep);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .quote-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--forest);
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-attr {
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ── CTA ─────────────────────────────────── */
+    #contact {
+      background: linear-gradient(135deg, #1A3028 0%, #2D6A4F 100%);
+      padding: 7rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+    .contact-title em { font-style: italic; color: var(--gold-light); }
+
+    .contact-desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,.7);
+      line-height: 1.8;
+      margin-bottom: 2.75rem;
+    }
+
+    .contact-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 1rem 2.25rem;
+      background: #fff;
+      color: var(--forest);
+      font-size: .825rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background .2s, color .2s, transform .2s;
+    }
+    .btn-white:hover {
+      background: var(--gold-light);
+      color: var(--espresso);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 1rem 2.25rem;
+      border: 1.5px solid rgba(255,255,255,.4);
+      color: rgba(255,255,255,.85);
+      font-size: .825rem;
+      font-weight: 400;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline-white:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,.07);
+    }
+
+    .contact-phone {
+      margin-top: 2.25rem;
+      font-size: .875rem;
+      color: rgba(255,255,255,.45);
+    }
+    .contact-phone a {
+      color: var(--gold-light);
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .contact-phone a:hover { color: #fff; }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer {
+      background: #0D0905;
+      color: rgba(255,255,255,.4);
+      padding: 4rem 3rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: .3rem;
+    }
+    .footer-brand-role {
+      font-size: .7rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .footer-brand-desc {
+      font-size: .825rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,.35);
+      max-width: 280px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: .75rem;
+      margin-top: 1.5rem;
+    }
+    .footer-social {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.45);
+      font-size: .8rem;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+    .footer-social:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    .footer-col-title {
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+    .footer-links a {
+      font-size: .825rem;
+      color: rgba(255,255,255,.4);
+      transition: color .2s;
+      line-height: 1.4;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      max-width: 1140px;
+      margin: 1.75rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      font-size: .72rem;
+      color: rgba(255,255,255,.22);
+      line-height: 1.7;
+    }
+
+    /* ── SCROLL ANIMATIONS ───────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+    .fade-up.in { opacity: 1; transform: translateY(0); }
+
+    .stagger-1 { transition-delay: .1s; }
+    .stagger-2 { transition-delay: .2s; }
+    .stagger-3 { transition-delay: .3s; }
+    .stagger-4 { transition-delay: .4s; }
+    .stagger-5 { transition-delay: .5s; }
+    .stagger-6 { transition-delay: .6s; }
+    .stagger-7 { transition-delay: .7s; }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 1024px) {
+      .about-inner { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      #nav { padding: 1.25rem 1.5rem; }
+      #nav.scrolled { padding: .875rem 1.5rem; }
+      .nav-links { display: none; }
+
+      .hero-photo-wrap { opacity: .4; width: 100%; }
+      .hero-vignette {
+        background:
+          linear-gradient(180deg, rgba(10,30,18,.85) 0%, rgba(10,30,18,.7) 100%);
+      }
+      .hero-content { padding: 0 1.5rem; padding-top: 7rem; max-width: 100%; }
+      .hero-accent-bar { display: none; }
+
+      .trust-strip { padding: 1rem 1.5rem; gap: .25rem; }
+      .trust-item { padding: .4rem 1rem; font-size: .72rem; }
+
+      #services { padding: 4rem 1.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+
+      #about { padding: 4.5rem 1.5rem; }
+      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo-wrap { max-width: 340px; }
+      .about-badge { right: -0.5rem; }
+
+      #quote { padding: 4rem 1.5rem; }
+      #contact { padding: 5rem 1.5rem; }
+
+      footer { padding: 3rem 1.5rem 2rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
+      .footer-bottom { flex-direction: column; gap: .75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ───────────────────────────────────── -->
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-logo">
+      Jacqueline Núñez
+      <span>Especialista en Seguros de Vida</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#about">Sobre Mí</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li><a href="https://calendly.com/jacqueline-nunez" target="_blank" rel="noopener" class="nav-cta-btn">Consulta Gratis</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────── -->
+  <section id="hero" aria-label="Inicio">
+    <div class="hero-bg"></div>
+
+    <div class="hero-photo-wrap" aria-hidden="true">
+      <img
+        class="hero-photo"
+        src="https://assets.cdn.filesafe.space/O57KCcI6OU1nHchdjZAr/media/69cdb862a7b48d7695f1182c.png"
+        alt="Jacqueline Núñez, Especialista en Seguros de Vida"
+      />
+      <div class="hero-vignette"></div>
+    </div>
+
+    <div class="hero-accent-bar" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">FCA Financial · Especialista · Living Benefits Expert</p>
+
+      <h1 class="hero-title">
+        Tu Legado<br />
+        <em>Comienza Hoy</em>
+      </h1>
+
+      <p class="hero-sub">Protege lo que más amas</p>
+
+      <p class="hero-desc">
+        Ayudo a familias y emprendedores de la comunidad latina en Estados Unidos a
+        proteger sus ingresos, reducir impuestos y construir un legado financiero
+        para las próximas generaciones.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://calendly.com/jacqueline-nunez" target="_blank" rel="noopener" class="btn-gold">
+          Consulta Gratuita
+        </a>
+        <a href="#about" class="btn-ghost">Conoce mi historia</a>
+      </div>
+
+      <div class="hero-contact">
+        <span>Llámame:</span>
+        <a href="tel:9092667979">(909) 266-7979</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST STRIP ───────────────────────────── -->
+  <div class="trust-strip" aria-label="Servicios principales">
+    <div class="trust-item"><div class="trust-dot"></div><span>Beneficios de Vida</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span>Planificación para el Retiro</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span>Protección Hipotecaria</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span>Educación Financiera Gratuita</span></div>
+    <div class="trust-item"><div class="trust-dot"></div><span>Planificación de Patrimonio</span></div>
+  </div>
+
+  <!-- ── SERVICES ──────────────────────────────── -->
+  <section id="services" aria-labelledby="services-title">
+    <div class="section-header fade-up">
+      <p class="eyebrow">Lo que hacemos</p>
+      <h2 class="section-title" id="services-title">Nuestros <em>Servicios</em></h2>
+      <p class="section-sub">
+        Estrategias financieras personalizadas para protegerte a ti y a tu familia
+        en cada etapa de la vida.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="svc-card fade-up stagger-1">
+        <div class="svc-icon" aria-hidden="true">🌿</div>
+        <div class="svc-title-es">Beneficios de Vida</div>
+        <div class="svc-title-en">Living Benefits</div>
+        <p class="svc-desc">
+          Accede a tu beneficio de muerte en vida si sufres un ataque cardíaco,
+          cáncer, derrame cerebral u otra enfermedad crítica. El seguro que trabaja
+          para ti mientras sigues vivo.
+        </p>
+      </div>
+
+      <div class="svc-card fade-up stagger-2">
+        <div class="svc-icon" aria-hidden="true">🏦</div>
+        <div class="svc-title-es">Planificación para el Retiro</div>
+        <div class="svc-title-en">Retirement Planning</div>
+        <p class="svc-desc">
+          Solo 5 estados obligan a tomar clases de finanzas en la escuela. Te
+          ayudamos a construir un retiro cómodo, libre de impuestos y sin miedo a
+          quedarte sin dinero.
+        </p>
+      </div>
+
+      <div class="svc-card fade-up stagger-3">
+        <div class="svc-icon" aria-hidden="true">🏡</div>
+        <div class="svc-title-es">Protección Hipotecaria</div>
+        <div class="svc-title-en">Mortgage Protection</div>
+        <p class="svc-desc">
+          Tu hogar es tu mayor inversión. Nuestros planes protegen tu hipoteca ante
+          muerte inesperada, enfermedades graves o pérdida de empleo, con Beneficios
+          de Vida incluidos.
+        </p>
+      </div>
+
+      <div class="svc-card fade-up stagger-4">
+        <div class="svc-icon" aria-hidden="true">💼</div>
+        <div class="svc-title-es">Protección de Ingresos</div>
+        <div class="svc-title-en">Income Protection</div>
+        <p class="svc-desc">
+          Imagina una máquina legal que imprime dinero para tu familia. Esa máquina
+          eres tú. Si algo te pasa, ¿cómo seguirán pagando las cuentas? Te
+          protegemos ante cualquier eventualidad.
+        </p>
+      </div>
+
+      <div class="svc-card fade-up stagger-5">
+        <div class="svc-icon" aria-hidden="true">🎓</div>
+        <div class="svc-title-es">Planificación para la Universidad</div>
+        <div class="svc-title-en">College Planning</div>
+        <p class="svc-desc">
+          El costo de la educación universitaria sube cada año. Empieza a planificar
+          hoy para que tus hijos alcancen sus sueños sin quedar enterrados en deudas
+          estudiantiles.
+        </p>
+      </div>
+
+      <div class="svc-card fade-up stagger-6">
+        <div class="svc-icon" aria-hidden="true">📜</div>
+        <div class="svc-title-es">Planificación de Patrimonio</div>
+        <div class="svc-title-en">Estate Planning</div>
+        <p class="svc-desc">
+          El 64% de los americanos no tiene un testamento. Los impuestos sucesorios
+          pueden superar el 40%. Te ayudamos a proteger tu legado y a que tu familia
+          conserve lo que construiste.
+        </p>
+      </div>
+
+      <div class="svc-card fade-up stagger-7">
+        <div class="svc-icon" aria-hidden="true">📊</div>
+        <div class="svc-title-es">Preservación de Negocios</div>
+        <div class="svc-title-en">Business Preservation</div>
+        <p class="svc-desc">
+          ¿Qué pasaría con tu empresa si perdieras a un empleado clave? Diseñamos
+          planes de protección para que tu negocio sobreviva y prospere ante
+          cualquier eventualidad.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────── -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="about-inner">
+
+      <div class="about-photo-wrap fade-up">
+        <img
+          class="about-photo"
+          src="https://assets.cdn.filesafe.space/O57KCcI6OU1nHchdjZAr/media/69cdb862a7b48d7695f1182c.png"
+          alt="Jacqueline Núñez, Agente de Seguros"
+        />
+        <div class="about-frame" aria-hidden="true"></div>
+        <div class="about-badge" aria-label="20 años de experiencia">
+          <strong>20+</strong>
+          <span>Años de Experiencia</span>
+        </div>
+      </div>
+
+      <div class="about-content fade-up stagger-2">
+        <p class="eyebrow">Sobre Mí</p>
+        <h2 class="section-title" id="about-title">
+          Una misión de <em>corazón</em>
+        </h2>
+
+        <div class="bio-block">
+          <div class="bio-lang-tag">Español</div>
+
+          <div class="bio-es">
+            <p>
+              ¡Hola! Soy Jacqueline, Agente de Seguros Digital, y estoy aquí para
+              enseñarte algo que <strong style="color:rgba(255,255,255,.9);">puede transformar tu futuro.</strong>
+              Me considero una persona positiva, con una gran determinación para
+              alcanzar mis metas. He sido estilista por más de 20 años, y amo
+              profundamente mi carrera. Mi verdadera pasión es ver a las personas
+              felices y satisfechas.
+            </p>
+            <p>
+              Con los años me di cuenta de que podía hacer más, tanto por mí misma
+              como por mis clientes. Fue así como empecé a pensar en el futuro. Cuando
+              llegué a EE.UU., me sentí perdida en un sistema financiero que no
+              entendía. Pero todo cambió cuando descubrí el secreto que usan los
+              millonarios para pagar menos impuestos de manera legal.
+            </p>
+            <p>
+              Durante más de 20 años he trabajado ayudando a personas a crecer:
+              primero en la industria de la belleza y ahora en el mundo financiero,
+              donde descubrí mi verdadera misión:
+              <em style="color:var(--gold-light);">Educar y guiar a familias a tomar decisiones inteligentes con su dinero.</em>
+            </p>
+            <p>
+              Hoy ayudo a emprendedores y familias, especialmente dentro de la
+              comunidad latina en Estados Unidos, a proteger sus ingresos, crear
+              estabilidad y construir un legado para las próximas generaciones. Creo
+              firmemente que todos merecemos acceso a información financiera que nos
+              permita vivir con tranquilidad y propósito.
+            </p>
+            <p>
+              <strong style="color:rgba(255,255,255,.9);">Este no es solo un servicio, es una misión:</strong>
+              Transformar tu presente y asegurar tu futuro.
+            </p>
+          </div>
+
+          <hr class="bio-divider" />
+
+          <div class="bio-lang-tag">English</div>
+          <p class="bio-en">
+            Hi, I'm Jacqueline. I consider myself a positive person with great
+            determination to achieve my goals. I've been a stylist for over 20 years,
+            and I deeply love my career. With experience came the realization that I
+            could do more. Today I help entrepreneurs and families — especially
+            within the Latino community in the U.S. — protect their income, create
+            stability, and build a legacy for future generations. This is not just a
+            service; it's a mission: Transform your present and secure your future.
+          </p>
+        </div>
+
+        <div class="about-cta">
+          <a href="https://calendly.com/jacqueline-nunez" target="_blank" rel="noopener" class="btn-gold">
+            Agenda tu Consulta Gratis
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── QUOTE ──────────────────────────────────── -->
+  <section id="quote" aria-label="Cita inspiradora">
+    <div class="quote-inner fade-up">
+      <p class="quote-text">
+        "Si ahorras dinero hoy, el dinero te salvará mañana.<br />
+        Fallar en planificar es planificar para fallar."
+      </p>
+      <p class="quote-attr">— Jacqueline Núñez · FCA Financial</p>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner">
+      <p class="eyebrow" style="justify-content:center; color:var(--gold-light);">
+        Empieza hoy
+      </p>
+      <h2 class="contact-title" id="contact-title">
+        ¿Listo para <em>proteger</em><br />tu futuro?
+      </h2>
+      <p class="contact-desc">
+        Una consulta gratuita es todo lo que necesitas para empezar. Sin compromisos,
+        sin términos confusos — solo claridad y un plan hecho para ti.
+      </p>
+
+      <div class="contact-btns">
+        <a href="https://calendly.com/jacqueline-nunez" target="_blank" rel="noopener" class="btn-white">
+          Agenda tu Consulta Gratis
+        </a>
+        <a href="tel:9092667979" class="btn-outline-white">
+          Llama Ahora
+        </a>
+      </div>
+
+      <p class="contact-phone">
+        O escríbeme directamente al
+        <a href="tel:9092667979">(909) 266-7979</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-brand-name">Jacqueline Núñez</div>
+        <div class="footer-brand-role">Especialista en Seguros de Vida · FCA Financial</div>
+        <p class="footer-brand-desc">
+          Ayudando a familias latinas en EE.UU. a proteger sus ingresos, reducir
+          impuestos y construir un legado duradero para las próximas generaciones.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/Financial-Concepts-of-America-549939045166137/" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/fcafinancial/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCkvsua-IxAvXmbf22XiTh3A" target="_blank" rel="noopener" class="footer-social" aria-label="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="#0D0905" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/fcafinancial/" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <ul class="footer-links">
+          <li><a href="#services">Beneficios de Vida</a></li>
+          <li><a href="#services">Planificación para el Retiro</a></li>
+          <li><a href="#services">Protección Hipotecaria</a></li>
+          <li><a href="#services">Protección de Ingresos</a></li>
+          <li><a href="#services">Planificación Universitaria</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Más</div>
+        <ul class="footer-links">
+          <li><a href="#services">Planificación de Patrimonio</a></li>
+          <li><a href="#services">Preservación de Negocios</a></li>
+          <li><a href="https://www.fcafinancial.com/resources" target="_blank" rel="noopener">Recursos</a></li>
+          <li><a href="https://www.fcafinancial.com/clients-testimonial" target="_blank" rel="noopener">Testimoniales</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <ul class="footer-links">
+          <li><a href="tel:9092667979">(909) 266-7979</a></li>
+          <li><a href="https://calendly.com/jacqueline-nunez" target="_blank" rel="noopener">Agendar Consulta</a></li>
+          <li><a href="https://activatulegado.com/registro" target="_blank" rel="noopener">MasterClass Gratuita</a></li>
+          <li><a href="https://www.fcafinancial.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Jacqueline Núñez · FCA Financial. Todos los derechos reservados.</p>
+      <p style="max-width: 600px; text-align: right;">
+        El contenido de este sitio es solo con fines informativos y no constituye
+        asesoramiento legal o fiscal. No todos los productos están disponibles en
+        todos los estados. FCA Insurance Services es una agencia de seguros que
+        ofrece productos de anualidades y seguros de vida fijos.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Sticky nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── Intersection Observer for fade-up animations
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
